@@ -1,4 +1,4 @@
-var mainUrl = "ttps://cdn.rawgit.com/one-inadem2015/db-noticias/master/";
+var baseUrl = "https://cdn.rawgit.com/one-inadem2015/db-noticias/master/";
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
@@ -15,7 +15,7 @@ $(document).ready(function () {
           return `${day} de ${monthName} de ${year}`;
       },
       parse(dateString, format) {
-          const parts = dateString.split('/');
+          const parts = dateString.split('/');  
           const day = parseInt(parts[0], 10);
           const month = parseInt(parts[1] - 1, 10);
           const year = parseInt(parts[1], 10);
@@ -35,7 +35,7 @@ function cargarArticulo(day, month, year) {
   let label = day.toString() + " de " + months[month-1].toString() + " de " + year.toString();
   $("#datepicker").val(label);
   $.ajax({
-    url: mainUrl + fileID + ".json",
+    url: baseUrl + year + '/' + mMonth + '/' + fileID + ".json",
     dataType: "JSON",
     success: function (data) {
       cargarTabla(data.noticias);
