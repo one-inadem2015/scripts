@@ -1,4 +1,4 @@
-var mainUrl = "https://bitbucket.org/_one/one-layout-preview/raw/cc1bc2b973d3d91660fb639f0682713fc0893b78/Noticias/";
+var mainUrl = "ttps://cdn.rawgit.com/one-inadem2015/db-noticias/master/";
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
