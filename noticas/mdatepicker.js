@@ -1,4 +1,4 @@
-var baseUrl = "https://cdn.rawgit.com/one-inadem2015/db-noticias/master/";
+var baseUrl = "https://raw.githubusercontent.com/one-inadem2015/db-noticias/master/";
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
