@@ -40,6 +40,14 @@ function cargarArticulo(day, month, year) {
     success: function (data) {
       cargarTabla(data.noticias);
     },
+    statusCode: {
+      404: function() {
+        $(".body-row").remove();
+        $("#tabla").append('<tr class="body-row"><td style="padding: 100px 0 200px 0; text-align: center;">'+
+          '<h4>Estamos trabajando en ello...</h4>' +
+        '</td></tr>');
+      }
+    }
   });
 }
 
