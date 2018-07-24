@@ -1,4 +1,4 @@
-var baseUrl = "https://raw.githubusercontent.com/one-inadem2015/db-noticias/master/";
+var baseUrl = "https://raw.githubusercontent.com/one-inadem2015/repositorio-one/master/noticias/";
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
