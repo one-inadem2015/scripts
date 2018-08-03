@@ -121,7 +121,7 @@ function insertarArticulos(info) {
       '<h4>' + element.titulo +'</h4> </div>' +
       '<div class="card-bottom">' +
       '<a href="' + element.url + '" target="_blank">' +
-      '<button type="button"><h5>IR A LA NOTA</h5></button>' +
+      '<button type="button"><h5>Ir a la nota</h5></button>' +
       '</a> </div> </div>';
       
     $("#card-container").append(cards);
@@ -224,7 +224,7 @@ function insertarHerramientas(info) {
       '</div>' +
       '<div class="card-bottom">' +
         '<a href="' + element.url +  '" target="_blank">' +
-          '<button type="button"><h5>CONOCER MÁS</h5></button>' +
+          '<button type="button"><h5>Conocer más</h5></button>' +
         '</a></div> </div> ';
 
     $("#card-container").append(cards);
