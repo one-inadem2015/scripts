@@ -117,7 +117,7 @@ function insertarArticulos(info) {
   info.forEach(element => {
     cards += '<div class="card col-md-2 col-sm-3 col-xs-12">' +
       '<div class="card-fil-' +  $("#select-fil").val() +'" id="card-' + index + '"></div>' +
-      '<div class="card-title" style="background-image: url(\'img/startup/interior-'+  $("#select-fil").val() +'.png\');">' +
+      '<div class="card-title" style="background-image: url(\'images/startup/interior-'+  $("#select-fil").val() +'.png\');">' +
       '<h4>' + element.titulo +'</h4> </div>' +
       '<div class="card-bottom">' +
       '<a href="' + element.url + '" target="_blank">' +
