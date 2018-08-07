@@ -66,7 +66,10 @@ function filtrar(fil) {
         scaleup.push(element);
       }else if (element.tipo == 2) {
         both.push(element);
+      }  else {
+        startup.push(element);
       }
+      
       return;
       case 1:
         if (element.tipo == 1) {
