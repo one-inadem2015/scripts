@@ -182,29 +182,15 @@ function InsertarGlosario(info) {
   removerCards();
   var index = 0;
   info.forEach(element => {
-    cards += '<div class="card col-md-2 col-sm-3 col-xs-12">' +
-          '<div class="card-fil-' +  $("#select-fil").val() +'" id="card-' + index + '"></div>' +
-          '<div class="card-title">' +
-          '<h4>' + element.titulo +'</h4> </div>' +
-          '<div class="card-bottom">' +
-          '<a href="' + element.url + '" target="_blank">' +
-          '<button type="button"><h5>IR A LA NOTA</h5></button>' +
-          '</a> </div> </div>';
-          
-          $("#card-container").append(cards);
-
-          if (element.tipo == 0) {
-            let icon1 = '';
-            icon1 += '<i class="fas fa-chart-line "></i>';
-            $("#card-" + index).append(icon1);
-          }
-          if (element.tipo == 1) {
-            let icon2 = '';
-            icon2 += '<i class="fas fa-rocket "></i>';
-            $("#card-" + index).append(icon2);
-          }
-          index += 1;
-          cards = '';
+    cards += '<button type="button"  class="card col-md-3 col-sm-4 col-xs-12" ' +
+      ' id="card-'+ index +'" onclick="verDefinicion(\'' + element.titulo + '\',\'' + element.cuerpo + '\',\''+ element.fuente + '\');">' +
+      '<div class="card-glosario" style="background-image: url(\'images/startup/glosario-card-background.png\');">' +
+        '<h5>'+ element.titulo +'</h5> ' +
+      '</div></button>';
+      
+      $("#card-container").append(cards);
+      index += 1;
+      cards = '';
   });
 }
 
@@ -238,6 +224,16 @@ function verVideo(url) {
   $("#modal-video").attr("tabindex", "-1");
   $("#modal-video").modal("show");
   $("#iframe").attr("src", url);
+}
+
+function verDefinicion(titulo, cuerpo, fuente) {
+  $("#modal-glosario").attr("role", "img");
+  $("#modal-glosario").attr("tabindex", "-1");
+  $("#modal-glosario").modal("show");
+  $("#modal-glosario-titulo, #modal-glosario-cuerpo, #modal-glosario-fuente").empty();
+  $("#modal-glosario-titulo").append(titulo);
+  $("#modal-glosario-cuerpo").append(cuerpo);
+  $("#modal-glosario-fuente").append("Fuente: " + fuente);
 }
 
 function filtrarHerramientas(idTipo) {
