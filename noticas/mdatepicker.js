@@ -7,7 +7,6 @@ $(document).ready(function () {
       field: document.getElementById('datepicker'),
       format: 'D/M/YYYY',
       defaultDate: new Date(16,08,2018),
-      maxDate: '+0m +0d',
       toString(date, format) {
           const day = date.getDate() ;
           const month = date.getMonth() + 1;
