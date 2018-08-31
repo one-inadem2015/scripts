@@ -12,7 +12,7 @@ $(document).ready(function () {
           const month = date.getMonth() + 1;
           const year = date.getFullYear();
           const monthName = this.i18n.months[month - 1];
-          cargarArticulo(day, month, year); 
+          //cargarArticulo(day, month, year); 
           return `${day} de ${monthName} de ${year}`;
       },
       parse(dateString, format) {
@@ -25,7 +25,7 @@ $(document).ready(function () {
     });
     cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
-
+$("#datepicker").datepicker( "option", "maxDate", "0D" );
 function cargarArticulo(day, month, year) {
   var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
   'Septiembre','Octubre','Noviembre','Diciembre'];            
@@ -34,7 +34,6 @@ function cargarArticulo(day, month, year) {
   let fileID = year.toString()  + mMonth.toString() + mDay.toString();
   let label = day.toString() + " de " + months[month-1].toString() + " de " + year.toString();
   $("#datepicker").val(label);
-  $("#datepicker").datepicker( "option", "maxDate", "0D" );
   $.ajax({
     url: baseUrl + year + '/' + mMonth + '/' + fileID + ".json",
     dataType: "JSON",
