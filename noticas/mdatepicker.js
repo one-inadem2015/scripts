@@ -15,7 +15,7 @@ $(document).ready(function () {
           const month = '08';
           const year = '2018';
           const monthName = this.i18n.months[month - 1];
-          //cargarArticulo(day, month, year); 
+          cargarArticulo(day, month, year); 
           return `${day} de ${monthName} de ${year}`;
       },
       parse(dateString, format) {
@@ -26,7 +26,7 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-    cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
+    //cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
 $("#datepicker").datepicker( "option", "maxDate", "0D" );
 function cargarArticulo(day, month, year) {
