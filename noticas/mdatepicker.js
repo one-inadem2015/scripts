@@ -5,8 +5,8 @@ $(document).ready(function () {
       var date = new Date();
       picker = new Pikaday({
       field: document.getElementById('datepicker'),
-      format: 'D/M/YYYY',
-      defaultDate: new Date(16,08,2018),
+      format: 'DD/MM/YYYY',
+      defaultDate: '16,08,2018',
       toString(date, format) {
           const day = date.getDate() ;
           const month = date.getMonth() + 1;
