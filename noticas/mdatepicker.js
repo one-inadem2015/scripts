@@ -24,14 +24,11 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-    
+    $( "#datepicker" ).datepicker( "option", "yearRange", "-99:+0" );
+    $( "#datepicker" ).datepicker( "option", "maxDate", "0d" );
     cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
-$(document).ready(function()
-{
-    $( "#datepicker" ).datepicker( "option", "yearRange", "-99:+0" );
-    $( "#datepicker" ).datepicker( "option", "maxDate", "+0m +0d" );
-});
+
 function cargarArticulo(day, month, year) {
   var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
   'Septiembre','Octubre','Noviembre','Diciembre'];            
