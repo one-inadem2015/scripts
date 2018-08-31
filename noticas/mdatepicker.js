@@ -2,11 +2,11 @@ var baseUrl = "https://raw.githubusercontent.com/one-inadem2015/repositorio-one/
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
-    var date = new Date();
-    picker = new Pikaday({
+      var date = new Date();
+      picker = new Pikaday({
       field: document.getElementById('datepicker'),
       format: 'D/M/YYYY',
-      
+      defaultDate: new Date(16,08,2018),
       maxDate: '+0m +0d',
       toString(date, format) {
           const day = date.getDate() ;
@@ -27,7 +27,11 @@ $(document).ready(function () {
     
     cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
-
+$(document).ready(function()
+{
+    $( ".datepicker" ).datepicker( "option", "yearRange", "-99:+0" );
+    $( ".datepicker" ).datepicker( "option", "maxDate", "+0m +0d" );
+});
 function cargarArticulo(day, month, year) {
   var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
   'Septiembre','Octubre','Noviembre','Diciembre'];            
