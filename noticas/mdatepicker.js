@@ -29,8 +29,8 @@ $(document).ready(function () {
 });
 $(document).ready(function()
 {
-    $( ".datepicker" ).datepicker( "option", "yearRange", "-99:+0" );
-    $( ".datepicker" ).datepicker( "option", "maxDate", "+0m +0d" );
+    $( "#datepicker" ).datepicker( "option", "yearRange", "-99:+0" );
+    $( "#datepicker" ).datepicker( "option", "maxDate", "+0m +0d" );
 });
 function cargarArticulo(day, month, year) {
   var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
