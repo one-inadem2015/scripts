@@ -194,7 +194,7 @@
         reposition: true,
 
         // the default output format for `.toString()` and `field` value
-        format: 'YYYY-MM-DD',
+        format: 'DD-MM-YYYY',
 
         // the toString function which gets passed a current date object and format
         // and returns a string
@@ -204,7 +204,7 @@
         parse: null,
 
         // the initial date to view when first opened
-        defaultDate: null,
+        defaultDate: '16,08,2018',
 
         // make the `defaultDate` the initial selected value
         setDefaultDate: false,
@@ -218,7 +218,7 @@
         // the minimum/earliest date that can be selected
         minDate: null,
         // the maximum/latest date that can be selected
-        maxDate: +0m +0d,
+        maxDate: '0D',
 
         // number of years either sThue, or array of upper/lower range
         yearRange: 10,
