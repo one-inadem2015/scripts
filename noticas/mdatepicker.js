@@ -2,18 +2,14 @@ var baseUrl = "https://raw.githubusercontent.com/one-inadem2015/repositorio-one/
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
-      var date = new Date();
+      var date = new Date(16,08,2018);
       picker = new Pikaday({
       field: document.getElementById('datepicker'),
       format: 'DD/MM/YYYY',
-      defaultDate: '16,08,2018',
       toString(date, format) {
-          /*const day = date.getDate() ;
+          const day = date.getDate() ;
           const month = date.getMonth() + 1;
-          const year = date.getFullYear();*/
-          const day = '15';
-          const month = '08';
-          const year = '2018';
+          const year = date.getFullYear();
           const monthName = this.i18n.months[month - 1];
           cargarArticulo(day, month, year); 
           return `${day} de ${monthName} de ${year}`;
