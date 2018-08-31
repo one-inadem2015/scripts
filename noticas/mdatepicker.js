@@ -6,6 +6,8 @@ $(document).ready(function () {
     picker = new Pikaday({
       field: document.getElementById('datepicker'),
       format: 'D/M/YYYY',
+      defaultDate: new Date(date),
+      maxDate: '+0m +0d',
       toString(date, format) {
           const day = date.getDate() ;
           const month = date.getMonth() + 1;
@@ -22,7 +24,7 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-
+    
     cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
 
