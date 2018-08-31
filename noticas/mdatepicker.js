@@ -24,8 +24,6 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-    $( "#datepicker" ).datepicker( "option", "yearRange", "-99:+0" );
-    $( "#datepicker" ).datepicker( "option", "maxDate", "0d" );
     cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
 
@@ -37,6 +35,7 @@ function cargarArticulo(day, month, year) {
   let fileID = year.toString()  + mMonth.toString() + mDay.toString();
   let label = day.toString() + " de " + months[month-1].toString() + " de " + year.toString();
   $("#datepicker").val(label);
+  $("#datepicker").datepicker( "option", "maxDate", "0D" );
   $.ajax({
     url: baseUrl + year + '/' + mMonth + '/' + fileID + ".json",
     dataType: "JSON",
