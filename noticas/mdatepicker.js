@@ -8,9 +8,12 @@ $(document).ready(function () {
       format: 'DD/MM/YYYY',
       defaultDate: '16,08,2018',
       toString(date, format) {
-          const day = date.getDate() ;
+          /*const day = date.getDate() ;
           const month = date.getMonth() + 1;
-          const year = date.getFullYear();
+          const year = date.getFullYear();*/
+          const day = '15';
+          const month = '08';
+          const year = '2018';
           const monthName = this.i18n.months[month - 1];
           //cargarArticulo(day, month, year); 
           return `${day} de ${monthName} de ${year}`;
