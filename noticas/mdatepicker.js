@@ -3,6 +3,8 @@ var picker = "";
 $(document).ready(function () {
   // Set current date
       var date = new Date('16','08','2018');
+      FechaFin.setDate(date.getDate());
+      to.datepicker("option","maxDate",FechaFin);
       picker = new Pikaday({
       field: document.getElementById('datepicker'),
       format: 'DD/MM/YYYY',
