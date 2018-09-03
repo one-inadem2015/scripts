@@ -24,7 +24,6 @@ $(document).ready(function () {
     });
     cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
-$("#datepicker").datepicker( "option", "maxDate", "0D" );
 function cargarArticulo(day, month, year) {
   var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
   'Septiembre','Octubre','Noviembre','Diciembre'];            
