@@ -22,10 +22,9 @@ $(document).ready(function () {
           const year = parseInt(parts[1], 10);
           return new Date(year, month, day);
       }
-        
-      FechaFin.setDate(date.getDate());
-      to.datepicker('option','maxDate',FechaFin);
     });
+    FechaFin.setDate(date.getDate());
+    $('#datepicker').datepicker('option','maxDate',FechaFin);
     cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
 function cargarArticulo(day, month, year) {
