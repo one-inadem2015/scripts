@@ -207,7 +207,7 @@
         defaultDate: '16,08,2018',
 
         // make the `defaultDate` the initial selected value
-        setDefaultDate: false,
+        setDefaultDate: '16,08,2018',
 
         // first day of week (0: Sunday, 1: Monday etc)
         firstDay: 0,
