@@ -204,7 +204,7 @@
         parse: null,
 
         // the initial date to view when first opened
-        defaultDate: '16,08,2018',
+        defaultDate: '16-08-2018',
 
         // make the `defaultDate` the initial selected value
         setDefaultDate: true,
@@ -218,7 +218,7 @@
         // the minimum/earliest date that can be selected
         minDate: null,
         // the maximum/latest date that can be selected
-        maxDate: '0D',
+        maxDate: '+0D',
 
         // number of years either sThue, or array of upper/lower range
         yearRange: 10,
