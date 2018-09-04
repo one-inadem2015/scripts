@@ -11,7 +11,7 @@ $(document).ready(function () {
           const month = date.getMonth() + 1;
           const year = date.getFullYear();
           const monthName = this.i18n.months[month - 1];
-          cargarArticulo(day, month, year); 
+          //cargarArticulo(day, month, year); 
           return `${day} de ${monthName} de ${year}`;
       },
       parse(dateString, format) {
