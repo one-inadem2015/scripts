@@ -23,7 +23,7 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-	//cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
+	cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
 
 function existeUrl(day, month, year) {
