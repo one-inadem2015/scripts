@@ -2,17 +2,16 @@ var baseUrl = "https://raw.githubusercontent.com/one-inadem2015/repositorio-one/
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
-      var date = new Date(16,08,2018);
-      var FechaFin = new Date();
-      picker = new Pikaday({
+    var date = new Date();
+    picker = new Pikaday({
       field: document.getElementById('datepicker'),
-      format: 'DD/MM/YYYY',
+      format: 'D/M/YYYY',
       toString(date, format) {
           const day = date.getDate() ;
           const month = date.getMonth() + 1;
           const year = date.getFullYear();
           const monthName = this.i18n.months[month - 1];
-          cargarArticulo(day, month, year); 
+          existeUrl(day, month, year); 
           return `${day} de ${monthName} de ${year}`;
       },
       parse(dateString, format) {
@@ -23,10 +22,19 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-    FechaFin.setDate(date.getDate());
-    $('#datepicker').datepicker('option','maxDate',FechaFin);
-    cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
+	existeUrl(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
+
+function existeUrl(day, month, year) {
+		var http = new XMLHttpRequest();
+		var url = baseUrl + year + '/' + mMonth + '/' + fileID + ".json"
+		http.open('HEAD', url, false);
+		http.send();
+		if (http.status!=404){
+			cargarArticulo(day, month, year);
+		}
+	}
+	
 function cargarArticulo(day, month, year) {
   var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
   'Septiembre','Octubre','Noviembre','Diciembre'];            
@@ -43,6 +51,7 @@ function cargarArticulo(day, month, year) {
     },
     statusCode: {
       404: function() {
+		  
         $(".body-row").remove();
         $("#tabla").append('<tr class="body-row"><td style="padding: 100px 0 200px 0; text-align: center;">'+
           '<h4>Estamos trabajando en ello...</h4>' +
