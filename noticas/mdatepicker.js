@@ -6,7 +6,6 @@ $(document).ready(function () {
     picker = new Pikaday({
       field: document.getElementById('datepicker'),
       format: 'D/M/YYYY',
-      defaults: {setDefaultDate = '16-08-2018';},
       toString(date, format) {
           const day = date.getDate() ;
           const month = date.getMonth() + 1;
@@ -23,7 +22,7 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-	//cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
+	cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
 
 function existeUrl(day, month, year) {
