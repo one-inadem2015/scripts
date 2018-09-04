@@ -4,7 +4,7 @@ $(document).ready(function () {
   // Set current date
     var date = new Date();
     picker = new Pikaday({
-      field: document.getElementById('datepicker_notas'),
+      field: document.getElementById('datepickerNotas'),
       format: 'D/M/YYYY',
       toString(date, format) {
           const day = date.getDate() ;
@@ -42,7 +42,7 @@ function cargarArticulo(day, month, year) {
   let mMonth = month < 10 ? "0" + month.toString(): month.toString();
   let fileID = year.toString()  + mMonth.toString() + mDay.toString();
   let label = day.toString() + " de " + months[month-1].toString() + " de " + year.toString();
-  $("#datepicker_notas").val(label);
+  $("#datepickerNotas").val(label);
   $.ajax({
     url: baseUrl + year + '/' + mMonth + '/' + fileID + ".json",
     dataType: "JSON",
