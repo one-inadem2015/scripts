@@ -207,7 +207,7 @@
         defaultDate: '16-08-2018',
 
         // make the `defaultDate` the initial selected value
-        setDefaultDate: true,
+        setDefaultDate: '16-08-2018',
 
         // first day of week (0: Sunday, 1: Monday etc)
         firstDay: 0,
@@ -253,7 +253,7 @@
         enableSelectionDaysInNextAndPreviousMonths: false,
 
         // how many months are visible
-        numberOfMonths: 2,
+        numberOfMonths: 1,
 
         // when numberOfMonths is used, this will help you to choose where the main calendar will be (default `left`, can be set to `right`)
         // only used for the first display or when a selected date is not visible
