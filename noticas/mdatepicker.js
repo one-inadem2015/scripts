@@ -23,7 +23,6 @@ $(document).ready(function () {
           return new Date(year, month, day);
       }
     });
-	var dia_max=document.getElementById('datepicker').defaults.maxDate;
 	cargarArticulo(date.getDate(), date.getMonth()+1, date.getFullYear());
 });
 
