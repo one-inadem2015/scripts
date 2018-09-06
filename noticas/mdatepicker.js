@@ -6,6 +6,7 @@ $(document).ready(function () {
     picker = new Pikaday({
       field: document.getElementById('datepicker'),
       format: 'DD/MM/YYYY',
+      maxDate: '16/08/2018',
       toString(date, format) {
           const day = date.getDate() ;
           const month = date.getMonth() + 1;
