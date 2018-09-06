@@ -194,7 +194,7 @@
         reposition: true,
 
         // the default output format for `.toString()` and `field` value
-        format: 'DD-MM-YYYY',
+        format: 'DD/MM/YYYY',
 
         // the toString function which gets passed a current date object and format
         // and returns a string
@@ -204,10 +204,10 @@
         parse: null,
 
         // the initial date to view when first opened
-        defaultDate: '16-08-2018',
+        defaultDate: '16/08/2018',
 
         // make the `defaultDate` the initial selected value
-        setDefaultDate: '16-08-2018',
+        setDefaultDate: '16/08/2018',
 
         // first day of week (0: Sunday, 1: Monday etc)
         firstDay: 0,
