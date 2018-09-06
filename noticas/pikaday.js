@@ -218,7 +218,7 @@
         // the minimum/earliest date that can be selected
         minDate: null,
         // the maximum/latest date that can be selected
-        maxDate: '+0D',
+        maxDate: null,
 
         // number of years either sThue, or array of upper/lower range
         yearRange: 10,
