@@ -2,7 +2,7 @@ var baseUrl = "https://raw.githubusercontent.com/one-inadem2015/repositorio-one/
 var picker = ""; 
 $(document).ready(function () {
   // Set current date
-    var date = new Date(2018,09,18);
+    var date = new Date(2018,09,17);
     picker = new Pikaday({
       field: document.getElementById('datepicker'),
       format: 'DD/MM/YYYY',
